@@ -1,7 +1,7 @@
-import { component$ } from '@builder.io/qwik';
-import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
-import { Analytics } from './analytics';
-import { Social } from './social';
+import { component$ } from "@builder.io/qwik";
+import { useDocumentHead, useLocation } from "@builder.io/qwik-city";
+import { Analytics } from "./analytics";
+import { Social } from "./social";
 
 export const Head = component$(() => {
   const head = useDocumentHead();
@@ -14,6 +14,7 @@ export const Head = component$(() => {
       <title>{head.title ? `${head.title} - Qwik` : `Qwik`}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical" href={loc.href} />
+      <link rel="preload" href="alex-gruber-PyoVjVgOfHg-unsplash.jpg" />
 
       {head.meta.map((m) => (
         <meta {...m} />

@@ -122,11 +122,20 @@ export default component$(() => {
           </div>
         </NavigationItem>
       </NavigationMenu>
-      {items.map((item) => {
+      {items.map((item, i) => {
         return (
           <div>
             <h1>Title</h1>
-            <img src={item.img} loading="lazy" />
+            {i === 0 ? (
+              <img src={item.img} width="1920px" height="1280px" />
+            ) : (
+              <img
+                src={item.img}
+                width="1920px"
+                height="1280px"
+                loading="lazy"
+              />
+            )}
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
